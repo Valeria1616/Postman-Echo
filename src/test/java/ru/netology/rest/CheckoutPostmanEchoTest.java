@@ -13,14 +13,14 @@ public class CheckoutPostmanEchoTest {
         given()
                 .baseUri("https://postman-echo.com")
                 .contentType("text/plain; charset=UTF-8")
-                .body("I Love Java - Netology (Нетология)") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("I Love Java - Netology") // отправляемые данные (заголовки и query можно выставлять аналогично)
                 // Выполняемые действия
                 .when()
                 .post("/post")
                 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("I Love Java - Netology (Нетология)"))
+                .body("data", equalTo("I Love JavaQ - Netology"))
         ;
     }
 }
